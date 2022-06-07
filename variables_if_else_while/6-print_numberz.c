@@ -3,7 +3,7 @@
 /**
  * main - prints all single digit numbers of base 10 starting from 0
  *
- * Return: alwasy returns 0
+ * Return: always returns 0
  */
 
 int main(void)
@@ -12,6 +12,6 @@ int main(void)
 
 	for (i = '0'; i <= '9'; i++)
 		putchar(i);
-	putchar('\n');
+	putchar("\n");
 	return (0);
 }
