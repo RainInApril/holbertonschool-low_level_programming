@@ -12,15 +12,15 @@ int main(void)
 	int b;
 	int c;
 
-	for (a = '0'; a <= '9'; a++)
+	for (c = '0'; c <= '7'; c++)
 	{
-		for (b = a + 1; b <= '8'; b++)
+		for (b = c + 1; b <= '8'; b++)
 		{
-			for (c = b + 1; c <= '7'; c++)
+			for (a = b + 1; a <= '9'; a++)
 			{
-				putchar(a);
-				putchar(b);
 				putchar(c);
+				putchar(b);
+				putchar(a);
 
 				if (a < '9' || b < '8' || c < '7')
 				{
