@@ -10,8 +10,8 @@ int main(void)
 {
 	char c = "_putchar";
 
-	while :
-	do {
+	while (c)
+	{
 		_putchar(c);
 		c++;
 	}
