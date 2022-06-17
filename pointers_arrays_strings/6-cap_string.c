@@ -34,6 +34,7 @@ char *cap_string(char *s)
 		{
 		       j = 0;
 		}
+		i = i + 1;
 	}
 	return (s);
 
