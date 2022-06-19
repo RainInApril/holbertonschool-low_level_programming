@@ -11,19 +11,20 @@
 
 void print_diagsums(int *a, int size)
 {
-	int i, j, ma1, ma2;
+	int i, j, k;
+	int ma1 = 0;
+	int ma2 = 0;
 
-	i = 0;
-	j = 0;
-	ma1 = 0;
-	ma2 = 0;
-
-	while (i < size)
+	for (i = 0; i < size; i++)
 	{
-		ma1 = ma1 + *(a + i + j);
-		ma2 = ma2 + *(a - i + j + size - 1);
-		j = j + size;
+		k = (size + 1) * i;
+		ma1 = ma1 + *(a + k);
+	}
+
+	for (j = size; j > 0; j--)
+	{
+		k = (size - 1) * j;
+		ma2 = ma2 + *(a + k);
 	}
 	printf("%d, %d\n", ma1, ma2);
-	i = i + 1;
 }
