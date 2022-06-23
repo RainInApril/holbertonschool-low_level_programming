@@ -28,25 +28,20 @@ int _strlen(char *s)
 char *str_concat(char *s1, char *s2)
 {
 	char *ptr;
-	unsigned int i, j;
+	int lens1, lens2;
 
-	i = _strlen(s1);
 	if (s1 == NULL)
-	{
-		i = 0;
-	}
+		s1 = "";
+	
+	if (s2 == NULL && s1 != NULL)
+		s2 = "";
 
-	j = _strlen(s2);
-	if (s2 == NULL)
-	{
-		j = 0;
-	}
+	lens1 = _strlen(s1);
+	lens2 = _strlen(s2) + 1;
 
-	ptr = malloc(sizeof(char) * (i + j) + 1);
+	ptr = malloc(sizeof(*ptr) * (lens1 + lens2));
 	if (ptr == NULL)
-	{
 		return (NULL);
-	}
 
 	strcpy(ptr, s1);
 	strcat(ptr, s2);
