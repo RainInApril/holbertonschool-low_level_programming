@@ -29,7 +29,7 @@ unsigned int _strlen(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	unsigned int lens1, lens2;
+	unsigned int lens1;
 	unsigned int i = 0;
 	unsigned int j = 0;
 
@@ -40,9 +40,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 
 	lens1 = _strlen(s1);
-	lens2 = _strlen(s2);
-	if (n >= lens2)
-		n = lens2;
 
 	ptr = malloc(sizeof(char) * (lens1 + n + 1));
 	if (ptr == NULL)
