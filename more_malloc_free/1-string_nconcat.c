@@ -43,7 +43,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	lens2 = _strlen(s2);
 	lenTotal = lens1 + lens2;
 
-	ptr = malloc(sizeof(*ptr) * (lenTotal) + 1 + n);
+	ptr = malloc(sizeof(*ptr) * (lenTotal) + n);
 	if (ptr == NULL)
 	{
 		return (NULL);
