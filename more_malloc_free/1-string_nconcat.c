@@ -40,8 +40,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 
 	lens1 = _strlen(s1);
+	lens2 = _strlen(s2);
+	lenTotal = lens1 + lens2;
 
-	ptr = malloc(sizeof(char) * (lens1 + n + 1));
+	ptr = malloc(sizeof(*ptr) * (lenTotal) + 1 + n);
 	if (ptr == NULL)
 	{
 		return (NULL);
