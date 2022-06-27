@@ -29,7 +29,7 @@ unsigned int _strlen(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	unsigned int lens1, lenTotal;
+	unsigned int lens1, lens2, lenTotal;
 	unsigned int i = 0;
 	unsigned int j = 0;
 
