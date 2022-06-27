@@ -9,9 +9,9 @@
  * Return: returns the length of a string
  */
 
-int _strlen(char *s)
+unsigned int _strlen(char *s)
 {
-	int len = 0;
+	unsigned int len = 0;
 
 	while (s[len] != '\0')
 		len++;
@@ -36,7 +36,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s1 == NULL)
 		s1 = "";
 
-	if (s2 == NULL && s1 != NULL)
+	if (s2 == NULL)
 		s2 = "";
 
 	lens1 = _strlen(s1);
