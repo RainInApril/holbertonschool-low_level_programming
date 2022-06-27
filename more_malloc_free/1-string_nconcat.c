@@ -51,10 +51,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 	for (i = 0; i < lens1; i++)
-		*(ptr + i) = *(s1 + i);
+	 	ptr[i] = s1[i];
 	for (i = lens1; j < n; i++)
 	{
-		*(ptr + i) = *(s2 + j);
+		ptr[i] = s2[j];
 		j++;
 	}
 	*(ptr + i) = '\0';
