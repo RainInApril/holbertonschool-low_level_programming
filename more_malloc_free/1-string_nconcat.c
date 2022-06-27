@@ -47,7 +47,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	ptr = malloc(sizeof(char) * (lens1 + n + 1));
 	if (ptr == NULL)
 	{
-		free(ptr);
 		return (NULL);
 	}
 
