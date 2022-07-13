@@ -4,7 +4,7 @@
 
 /**
  * print_list - prints all the elements of a list_t list
- * *h: pointer to list_t list
+ * @h: pointer to list_t list
  * Return: the number of nodes
  */
 
@@ -23,7 +23,7 @@ size_t print_list(const list_t *h)
 		/* prints the value in len and str the h pointer is pointing to */
 		else
 			printf("[%d] %s\n", h->len, h->str);
-		
+
 		/* h is assigned the address of the next node */
 		h = h->next;
 		/* counts the number of node */
