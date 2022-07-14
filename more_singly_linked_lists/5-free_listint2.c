@@ -13,15 +13,22 @@ void free_listint2(listint_t **head)
 	/* creates a temporary node */
 	listint_t *tmp;
 
-	/* checks to see whether head is equals to NULL */
+	/* checks whether head == NULL */
+	if (head == NULL)
+		return;
+
+	/* checks whether *head is not equals to NULL */
 	while (*head != NULL)
 	{
-		/* assigns the value of next to tmpNode */
-		tmp = (*head)->next;
-		/* frees the head node */
-		free(*head);
-		/* head becomes tmpNode */
-		*head = tmp;
+		/* assigns the value of *head to tmp */
+		tmp = *head;
+		/* assigns the value of next node of *head to *head */
+		*head = (*head)->next;
+		/* frees the tmp */
+		free(tmp);
 	}
+	/* sets head to NULL */
 	head = NULL;
+	/* frees the head node*/
+	free(head);
 }
