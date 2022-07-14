@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * listint_len - returns the number of elements in a list_t list
+ * listint_len - returns the number of elements in a listint_t list
  * @h: pointer to listint_t list
  * Return: the number of nodes
  */
