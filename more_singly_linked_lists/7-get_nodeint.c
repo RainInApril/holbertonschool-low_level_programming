@@ -17,19 +17,19 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	/* if index is 0 returns head */
 	if (index == 0)
 		return (head);
-	/* checks whether head is NULL */
-	while (head != NULL)
+
+	/* increments n until it matches index */
+	while (n < index)
 	{
-		/* increments n until it matches the index */
-		if (n < index)
-		{
-			/* head becomes the next node */
-			head = head->next;
-			n = n + 1;
-		}
-		/* returns head when n == index */
-		return (head);
+		/* assigns next node to the head node */
+		/* so it becomes the next node */
+		head = head->next;
+		/* increments n until n == index */
+		n = n + 1;
+		/* returns NULL if node doesn't exist */
+		if (head == NULL)
+			return (NULL);
 	}
-	/* returns NULL if node doesn't exist */
-	return (NULL);
+	/* returns the node */
+	return (head);
 }
