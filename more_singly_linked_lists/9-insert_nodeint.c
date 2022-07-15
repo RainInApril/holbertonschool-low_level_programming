@@ -5,6 +5,7 @@
  * @head: pointer of pointer to listint_t list
  * @idx: the index of the list where the new node should be added.
  * Index starts at 0
+ * @n: data in node
  * Return: the address of the new node, or NULL if it failed
  * NULL if it is not possible to add the new node at index idx
  */
@@ -14,9 +15,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *tmp, *newNode;
 	unsigned int i = 0;
 
-	/* returns NULL if *head is empty */
-	/* which means the linked list is empty */
-	if (*head == NULL)
+	/* returns NULL if *head is empty & index > 0 */
+	/* which means it is not possible to add new node at index idx */
+	if (*head == NULL && idx > 0)
 		return (NULL);
 
 	/* allocates a memory space for the new node */
