@@ -15,17 +15,17 @@ unsigned int binary_to_uint(const char *b)
 
 	/* returns 0 if b is NULL */
 	if (b == NULL)
-		return 0;
+		return (0);
 
 	while (b[index] != '\0')
 	{
 		/* returns 0 if one or more chars in string b is not 0 or 1 */
-		if (b[index] != 0 || b[index] != 1)
+		if (b[index] != '0' && b[index] != '1')
 			return (0);
 		/* shift 1 place to the left */
 		num = num << 1;
-		num = num + b[index]-'0';
+		num = num + b[index] - '0';
 		index = index + 1;
 	}
-	return num;
+	return (num);
 }
