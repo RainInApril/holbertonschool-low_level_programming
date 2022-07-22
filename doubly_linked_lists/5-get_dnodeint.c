@@ -12,9 +12,6 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	unsigned int count = 0;
 
-	/* returns NULL if head is empty */
-	if (head == NULL)
-		return (NULL);
 	/* returns head node if index is 0 */
 	if (index == 0)
 		return (head);
@@ -25,6 +22,9 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 		head = head->next;
 		/* increments count */
 		count = count + 1;
+		/* returns NULL if head is empty */
+		if (head == NULL)
+			return (NULL);
 	}
 	/* returns the node at index */
 	return (head);
