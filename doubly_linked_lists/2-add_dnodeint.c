@@ -21,7 +21,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 		return (NULL);
 	/*assigns NULL to prev of new node */
 	newNode->prev = NULL;
-	/*aasigns value n to new node */
+	/*assigns value n to new node */
 	newNode->n = n;
 	/* assigns new node as pointer head's prev */
 	/* to become the beginning of the list */
